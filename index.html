@@ -1,0 +1,830 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>/* copy from https://github.com/sindresorhus/github-markdown-css/ */
+
+html,body{background-color: #2d2d2d;}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #cccccc;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body figure{margin:0;padding:0; display:table;}
+.markdown-body figure figcaption{font-size:92%; text-align:center; color:#999999;}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #66cccc;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' fill='%2366cccc' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+.markdown-body strong{
+  color: #f99157;
+}
+.markdown-body em{
+  color: #ffcc66;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #99cc99;
+  text-decoration: none;
+}
+.markdown-body mjx-container[jax="SVG"] > svg a{fill:#99cc99;stroke: #99cc99;}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 12px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 12px;
+  color: #999999;
+  vertical-align: middle;
+  background-color: #333333;
+  border: 1px solid #494949;
+  border-radius: 3px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #494949;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #9b9b9b;
+  border-left: .25em solid #f2777a;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #434343;
+  color: #66cccc;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+  color: #66cccc;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+  color: #66cccc;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+  color: #66cccc;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+  color: #66cccc;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #66cccc;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #717171;
+}
+
+.markdown-body table tr {
+  background-color: #2d2d2d;
+  border-top: 1px solid #717171;
+}
+
+.markdown-body table th {
+  background-color: #434343;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #323232;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #333333;
+  color: #999999;
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+   font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #333333;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+  color: #999999;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body section.footnotes{
+    margin-top:48px;
+    border-top:solid 1px #494949;
+    padding-top:0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body mark{color: #111;}
+}
+
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background-color: #333333;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #48be66;
+}
+
+.token.punctuation {
+    color: #8b86c9;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #8b86c9;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #e6424b;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #$$codeBlockColor$$;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #c33795;
+}
+
+.token.function,
+.token.class-name {
+    color: #67878e;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #d38e63;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #6b6b6b;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+  .line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: #6b6b6b;
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+
+
+</style><style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;
+    padding: 28px}
+@media print{
+    code,pre,pre code{
+        overflow: visible; word-wrap: break-word !important;
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+</style><script>window.MathJax = {     tex: { tags: 'ams' },     startup: {     pageReady() {       return MathJax.startup.defaultPageReady().then(function () {          window.mweb_mathjax_ready_val = 'yes';          if(window.mweb_mathjax_ready !== undefined){ mweb_mathjax_ready(); }       });     }   }};document.addEventListener('DOMContentLoaded', function(event) {    if (typeof Prism != 'undefined') {         Prism.highlightAll();     }});window.mweb_mathjax_ready_val = '';function theMWebMathJaxRenderIsReady(key){ return window.mweb_mathjax_ready_val; }</script><script>document.addEventListener('DOMContentLoaded', function(event) {window.mweb_mathjax_ready_val = 'yes';})</script></head><body><div id='markdown_content' class='markdown-body'><!-----
+title: 用户协议
+date: 2022-04-23 16:22:19
+----->
+<h1><a id="%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>用户协议</h1>
+<p>欢迎申请使用《d4iPhon》提供的服务。请用户仔细阅读以下全部内容。如用户不同意本服务条款任意内容，请不要继续使用《d4iPhon》。</p>
+<h3><a id="1%E3%80%81%E6%9C%8D%E5%8A%A1%E6%9D%A1%E6%AC%BE%E7%9A%84%E7%A1%AE%E8%AE%A4%E5%92%8C%E6%8E%A5%E7%BA%B3" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1、服务条款的确认和接纳</h3>
+<p>《d4iPhon》涉及到的《d4iPhon》的所有权以及相关文档的知识产权归《d4iPhon》所有。《d4iPhon》所提供的服务必须按照其发布的公司章程，服务条款和操作规则严格执行。本服务条款的效力范围及于《d4iPhon》的一切产品和服务，用户在享受《d4iPhon》任何单项服务时，应当受本服务条款的约束。<br />
+当用户使用《d4iPhon》各单项服务时，用户的使用行为视为其对该单项服务的服务条款以及《d4iPhon》在该单项服务中发出的各类公告的同意。</p>
+<h3><a id="2%E3%80%81%E3%80%8Ad4iphon%E3%80%8B%E7%AE%80%E4%BB%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2、《d4iPhon》简介</h3>
+<p>《d4iPhon》运用自己的操作系统通过国际互联网络为用户提供各项服务。用户必须：<br />
+（1）提供设备，如个人电脑、手机或其他上网设备。<br />
+（2）个人上网和支付与此服务有关的费用。<br />
+考虑到《d4iPhon》服务的重要性，用户同意：<br />
+（1）提供及时、详尽及准确的个人资料。<br />
+（2）不断更新注册资料，符合及时、详尽、准确要求。《d4iPhon》注册资料包括：用户的帐号、密码及注册或更新注册资料时输入的所有信息。用户注册帐号时填写的身份证件信息不能更新。<br />
+如果用户提供给《d4iPhon》的资料不准确，不真实，不合法有效，《d4iPhon》帮保留结束用户使用《d4iPhon》各项服务的权利。用户同意，其提供的真实、准确的《d4iPhon》注册资料作为认定用户与其《d4iPhon》帐号的关联性以及用户身份的唯一证据。用户在享用《d4iPhon》各项服务的同时，同意接受《d4iPhon》提供的各类信息服务。《d4iPhon》提醒用户，用户注册帐号或更新注册信息时填写的证件号码，在注册帐号成功或补充填写后将无法进行修改，请用户慎重填写各类注册信息。<br />
+用户同意，其与《d4iPhon》帐号相关的一切资料、数据和记录（包括但不限于登录记录、登录后行为、点卡信息等）以《d4iPhon》的系统数据为准。</p>
+<h3><a id="3%E3%80%81%E6%9C%8D%E5%8A%A1%E6%9D%A1%E6%AC%BE%E7%9A%84%E4%BF%AE%E6%94%B9" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3、服务条款的修改</h3>
+<p>《d4iPhon》有权在必要时通过在网页上发出公告等合理方式修改本服务条款以及各单项服务的相关条款。用户在享受各项服务时，应当及时查阅了解修改的内容，并自觉遵守本服务条款以及该单项服务的相关条款。用户如继续使用本服务条款涉及的服务，则视为对修改内容的同意；用户在不同意修改内容的情况下，有权停止使用本服务条款涉及的服务。</p>
+<h3><a id="4%E3%80%81%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%8F%98%E6%9B%B4%E6%88%96%E4%B8%AD%E6%AD%A2" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>4、服务的变更或中止</h3>
+<p>《d4iPhon》保留随时变更或中止服务的权利。用户同意《d4iPhon》有权行使上述权利且不需对用户或第三方承担任何责任。</p>
+<h3><a id="5%E3%80%81%E7%94%A8%E6%88%B7%E9%9A%90%E7%A7%81%E5%88%B6%E5%BA%A6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5、用户隐私制度</h3>
+<p>用户知悉并同意，为便于向用户提供更好的服务，《d4iPhon》将在用户自愿选择服务或者提供信息的情况下收集用户的个人信息，并将这些信息进行整合。在用户使用《d4iPhon》时，服务器会自动记录一些信息，包括但不限于URL、IP地址、浏览器类型、使用语言、访问日期和时间等。为方便用户登录或使用《d4iPhon》的服务，《d4iPhon》在有需要时将使用cookies等技术，并将收集到的信息发送到对应的服务器。用户可以选择接受或者拒绝cookies。如用户选择拒绝cookies，则用户有可能无法登陆或使用依赖于cookies的服务或者功能。《d4iPhon》收集的信息将成为《d4iPhon》常规商业档案的一部分，且有可能因为转让、合并、收购、重组等原因而被转移到《d4iPhon》的继任公司或者指定的一方。《d4iPhon》同意善意使用收集的信息，且采取各项措施保证信息安全。<br />
+尊重用户个人隐私是《d4iPhon》的一项基本政策。所以，《d4iPhon》不会公开或透露用户的注册资料及保存在《d4iPhon》各项服务中的非公开内容。 除非《d4iPhon》在诚信的基础上认为透露这些信息在以下几种情况是必要的：<br />
+（1）遵守有关法律规定，包括在国家有关机关查询时，提供用户的注册信息、用户在《d4iPhon》的网页上发布的信息内容及其发布时间、互联网地址或者域名。<br />
+（2）保持维护《d4iPhon》的知识产权和其他重要权利。<br />
+（3）在紧急情况下竭力维护用户个人和社会大众的隐私安全。<br />
+（4）根据本条款相关规定或者《d4iPhon》认为必要的其他情况下。</p>
+<h3><a id="6%E3%80%81%E7%94%A8%E6%88%B7%E7%9A%84%E5%B8%90%E5%8F%B7%E3%80%81%E5%AF%86%E7%A0%81%E5%92%8C%E5%AE%89%E5%85%A8%E6%80%A7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>6、用户的帐号、密码和安全性</h3>
+<p>用户一旦注册成功成为用户，用户将得到一个密码和帐号。如果用户未保管好自己的帐号和密码而对用户、《d4iPhon》或第三方造成的损害，用户将负全部责任。另外，每个用户都要对其帐户中的所有活动和事件负全责。用户可随时改变用户的密码和图标，也可以结束旧的帐户重开一个新帐户。用户同意若发现任何非法使用用户帐号或安全漏洞的情况，有义务立即通告《d4iPhon》。</p>
+<h3><a id="7%E3%80%81%E6%8B%92%E7%BB%9D%E6%8F%90%E4%BE%9B%E6%8B%85%E4%BF%9D%E5%92%8C%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>7、拒绝提供担保和免责声明</h3>
+<p>用户明确同意使用《d4iPhon》的风险由用户个人承担。《d4iPhon》的帐号与服务以“现有”的状态提供给用户，《d4iPhon》《d4iPhon》明确表示不提供任何类型的担保，不论是明确的或隐含的。《d4iPhon》不担保服务一定能满足用户的要求，不担保服务不会受中断，不担保服务的及时性、安全性、真实性，以及出错可能性。用户理解并接受下载或通过《d4iPhon》服务取得的任何信息资料取决于用户自己，并由其承担系统受损、资料丢失以及其它任何风险。《d4iPhon》对在服务网上得到的任何商品购物服务、交易进程、招聘信息，都不作担保。</p>
+<h3><a id="8%E3%80%81%E5%85%8D%E8%B4%A3%E6%9D%A1%E6%AC%BE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>8、免责条款</h3>
+<p>《d4iPhon》对直接、间接、偶然、特殊及继起的损害不负责任，这些损害来自：不正当使用产品服务，在网上购买商品或类似服务，在网上进行交易，非法使用服务或用户传送的信息有所变动。这些损害会导致《d4iPhon》形象受损，所以《d4iPhon》早已提出这种损害的可能性。<br />
+《d4iPhon》对本项服务下涉及的境内外基础电信运营商的移动通信网络的故障、技术缺陷、覆盖范围限制、不可抗力、计算机病毒、黑客攻击、用户所在位置、用户关机或其他非《d4iPhon》技术能力范围内的事因等造成的服务中断、用户发送的短信息的内容丢失、出现乱码、错误接收、无法接收、迟延接收不承担责任。</p>
+<h3><a id="9%E3%80%81%E7%A6%81%E6%AD%A2%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%95%86%E4%B8%9A%E5%8C%96" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>9、禁止服务的商业化</h3>
+<p>用户承诺，非经《d4iPhon》同意，用户不能利用《d4iPhon》各项服务进行销售或其他商业用途。如用户有需要将服务用于商业用途，应书面通知《d4iPhon》并获得《d4iPhon》的明确授权。</p>
+<h3><a id="10%E3%80%81%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>10、用户管理</h3>
+<p>用户独立承担其发布内容的责任。用户对服务的使用必须遵守所有适用于服务的地方法律、国家法律和国际法律。用户承诺：<br />
+（1）用户在《d4iPhon》的网页上发布信息或者利用《d4iPhon》的服务时必须符合中国有关法规，不得在《d4iPhon》的网页上或者利用《d4iPhon》的服务制作、复制、发布、传播以下信息：<br />
+（a） 违反宪法确定的基本原则的；<br />
+（b） 危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；<br />
+（c） 损害国家荣誉和利益的；<br />
+（d） 煽动民族仇恨、民族歧视，破坏民族团结的；<br />
+（e） 破坏国家宗教政策，宣扬邪教和封建迷信的；<br />
+（f） 散布谣言，扰乱社会秩序，破坏社会稳定的；<br />
+（g） 散布淫秽、色情、赌博、暴力、恐怖或者教唆犯罪的；<br />
+（h） 侮辱或者诽谤他人，侵害他人合法权益的；<br />
+（i） 煽动非法集会、结社、游行、示威、聚众扰乱社会秩序的；<br />
+（j） 以非法民间组织名义活动的；<br />
+（k） 含有法律、行政法规禁止的其他内容的。<br />
+（2）用户在《d4iPhon》的网页上发布信息或者利用《d4iPhon》的服务时还必须符合其他有关国家和地区的法律规定以及国际法的有关规定。用户需遵守法律法规使用《d4iPhon》微博服务。<br />
+（3）用户不得利用《d4iPhon》的服务从事以下活动：<br />
+（a） 未经允许，进入计算机信息网络或者使用计算机信息网络资源的；<br />
+（b） 未经允许，对计算机信息网络功能进行删除、修改或者增加的；<br />
+（c） 未经允许，对进入计算机信息网络中存储、处理或者传输的数据和应用程序进行删除、修改或者增加的；<br />
+（d） 故意制作、传播计算机病毒等破坏性程序的；<br />
+（e） 其他危害计算机信息网络安全的行为。<br />
+（4）用户不得以任何方式干扰《d4iPhon》的服务。<br />
+（5）用户不得滥用《d4iPhon》，包括但不限于：利用《d4iPhon》提供的邮箱服务发送垃圾邮件，利用《d4iPhon》进行侵害他人知识产权或者合法利益的其他行为。<br />
+（6）用户应遵守《d4iPhon》的所有其他规定和程序。<br />
+用户须对自己在使用《d4iPhon》过程中的行为承担法律责任。用户承担法律责任的形式包括但不限于：对受到侵害者进行赔偿，以及在《d4iPhon》首先承担了因用户行为导致的行政处罚或侵权损害赔偿责任后，用户应给予《d4iPhon》等额的赔偿。用户理解，如果《d4iPhon》发现其网站传输的信息明显属于上段第（1）条所列内容之一，依据中国法律，《d4iPhon》有义务立即停止传输，保存有关记录，向国家有关机关报告，并且删除含有该内容的地址、目录或关闭服务器。</p>
+<h3><a id="11%E3%80%81%E4%BF%9D%E9%9A%9C" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>11、保障</h3>
+<p>用户同意保障和维护《d4iPhon》全体成员的利益，负责支付由用户使用超出服务范围引起的律师费用，违反服务条款的损害补偿费用，其它人使用用户的电脑、帐号而产生的费用。用户或者使用用户帐号的其他人在使用服务过程中侵犯第三方知识产权及其他权利而导致被侵权人索赔的，由用户承担责任。<br />
+如用户或其它网络服务提供者利用《d4iPhon》的服务侵害他人民事权益的，应当承担侵权等法律责任。<br />
+如用户利用《d4iPhon》的服务实施侵权行为的，被侵权人有权通知《d4iPhon》采取删除、屏蔽、断开链接等必要措施。《d4iPhon》接到通知后，因自身过错若未及时采取必要措施的，按法律规定承担责任。<br />
+《d4iPhon》若明知用户利用其网络服务侵害他人民事权益，未在本服务条款约定的范围内采取必要措施的，按法律规定承担责任。</p>
+<h3><a id="12%E3%80%81%E7%BB%93%E6%9D%9F%E6%9C%8D%E5%8A%A1" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>12、结束服务</h3>
+<p>用户或《d4iPhon》可随时根据实际情况终止服务。《d4iPhon》有权单方不经通知终止向用户提供某一项或多项服务；用户有权单方不经通知单方终止接受《d4iPhon》的服务。<br />
+结束用户服务后，用户使用《d4iPhon》的权利立即终止。从那时起，《d4iPhon》不再对用户承担任何义务。<br />
+用户知道并同意，服务变更、中止与结束属于《d4iPhon》商业决策之内容。用户不得因服务的变更、中止或者结束而要求《d4iPhon》继续提供服务或者承担任何形式的赔偿责任等。</p>
+<h3><a id="13%E3%80%81%E9%80%9A%E7%9F%A5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>13、通知</h3>
+<p>所有发给用户的通知都可通过电子邮件、常规的信件或在网站显著位置公告的方式进行传送。《d4iPhon》将通过上述方法之一将消息传递给用户，告知他们服务条款的修改、服务变更、或其它重要事项。同时，《d4iPhon》保留对申请了《d4iPhon》邮箱的用户投放商业性广告的权利。</p>
+<h3><a id="14%E3%80%81%E6%B3%95%E5%BE%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>14、法律</h3>
+<p>本条款适用中华人民共和国的法律，并且排除一切冲突法规定的适用。</p>
+<h3><a id="15%E3%80%81%E4%BF%A1%E6%81%AF%E5%82%A8%E5%AD%98%E5%8F%8A%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>15、信息储存及相关知识产权</h3>
+<p>《d4iPhon》对上所有服务将尽力维护其安全性及方便性，但对服务中出现的信息（包括但不限于用户发布的信息）删除或储存失败不承担任何责任。另外《d4iPhon》保留判定用户的行为是否符合本服务条款的要求的权利，如果用户违背了本服务条款的规定，《d4iPhon》有权中止或者终止对其《d4iPhon》帐号的服务。<br />
+在《d4iPhon》所含服务中，无论是用户原创或是用户得到著作权人授权转载的作品，用户上载的行为即意味着用户或用户代理的著作权人授权《d4iPhon》对上载作品享有免费的不可撤销的永久的使用权和收益权，但用户或原著作权人仍保有上载作品的著作权。</p>
+<h3><a id="16%E3%80%81%E6%9D%83%E5%88%A9%E5%A3%B0%E6%98%8E" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>16、权利声明</h3>
+<p>《d4iPhon》不行使、未能及时行使或者未充分行使本条款或者按照法律规定所享有的权利，不应被视为放弃该权利，也不影响《d4iPhon》在将来行使该权利。<br />
+在法律允许的最大范围内，《d4iPhon》保留对本服务条款的最终解释权。</p>
+</div></body></html>
